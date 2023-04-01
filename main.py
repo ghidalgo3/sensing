@@ -54,7 +54,7 @@ while True:
 
     with open(datafile, mode="a", newline='') as csvfile:
         print("")
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames())
         writer.writerow(row)
 
     time.sleep(sensingPeriod)
