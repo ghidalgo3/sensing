@@ -28,7 +28,7 @@ def sample(
 def fieldnames():
     return list(sample().keys())
 
-if not os.file.isfile(datafile):
+if not os.path.isfile(datafile):
     print("Creating CSV file")
     with open(datafile, mode="w", newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames())
